@@ -1,0 +1,16 @@
+C:\Users\1\Desktop\KursProject\bin\Debug\KursProject.exe.config
+C:\Users\1\Desktop\KursProject\bin\Debug\KursProject.exe
+C:\Users\1\Desktop\KursProject\bin\Debug\KursProject.pdb
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.csproj.AssemblyReference.cache
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\1\Desktop\KursProject\obj\Debug\MainWindow.g.cs
+C:\Users\1\Desktop\KursProject\obj\Debug\App.g.cs
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject_MarkupCompile.cache
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject_MarkupCompile.lref
+C:\Users\1\Desktop\KursProject\obj\Debug\MainWindow.baml
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.g.resources
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.Properties.Resources.resources
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.csproj.GenerateResource.cache
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.exe
+C:\Users\1\Desktop\KursProject\obj\Debug\KursProject.pdb

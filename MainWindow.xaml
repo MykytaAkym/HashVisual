@@ -1,0 +1,68 @@
+﻿<Window x:Class="HashDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HashDemo"
+        mc:Ignorable="d"
+        Title="Hashing is clear" Height="625.752" Width="996.592" ResizeMode="NoResize">
+    <Grid Name="Main" Margin="0,0,-4,0" HorizontalAlignment="Left" Width="1304" RenderTransformOrigin="0.512,0.431" Height="779" VerticalAlignment="Top" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="24.981"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="464*"/>
+            <ColumnDefinition Width="602*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="109*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="87*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Speed" FontFamily="Times New Roman" Height="96" Margin="38,113,335,0" VerticalAlignment="Top" Grid.Column="4">
+            <Label Content="Specify rendering speed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="10,0,0,0"/>
+        </GroupBox>
+
+        <GroupBox Header="Result" HorizontalAlignment="Left" FontFamily="Times New Roman" Height="116" Margin="19,423,0,0" VerticalAlignment="Top" Width="696" Grid.RowSpan="4" Grid.ColumnSpan="5"/>
+
+        <GroupBox Header="Summation" HorizontalAlignment="Left" FontFamily="Times New Roman" Height="169" Margin="19,220,0,0" VerticalAlignment="Top" Width="950" Grid.ColumnSpan="5"/>
+
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="31" Margin="35,169,0,0" Stroke="Black" VerticalAlignment="Top" Width="680" Grid.ColumnSpan="5"/>
+
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="31" Margin="35,107,0,0" Stroke="Black" VerticalAlignment="Top" Width="680" Grid.ColumnSpan="5"/>
+
+        <StackPanel x:Name = "MainPanel" Orientation="Vertical" Margin="35,252,589,77" Background="Black" Grid.ColumnSpan="5"/>
+
+        <StackPanel x:Name="NumPanel_1" Orientation="Horizontal" HorizontalAlignment="Left" Height="20" Margin="45,113,0,0" VerticalAlignment="Top" Width="660" Background="Red" OpacityMask="Black" Grid.ColumnSpan="5"/>
+        <Button Content="Hash calculation" Name ="Start_Button"  FontFamily="Times New Roman" HorizontalAlignment="Left" Margin="148,14,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click" Height="46" Grid.Column="3"/>
+        <TextBox HorizontalAlignment="Left" MaxLength="50" FontFamily="Times New Roman" TextAlignment ="Center"  Height="20" Margin="35,27,0,0" TextWrapping="Wrap" x:Name="textbox1" VerticalAlignment="Top" Width="319" Grid.ColumnSpan="4"/>
+        <StackPanel x:Name="NumPanel_2"  Orientation="Horizontal" HorizontalAlignment="Left" Height="20" Margin="45,174,0,0" VerticalAlignment="Top" Width="660" Background="Red" Grid.ColumnSpan="5"/>
+        <Label Content="" HorizontalAlignment="Left" x:Name ="label_res"  Height="32" Margin="35,54,0,0" VerticalAlignment="Top" Width="303" Grid.Row="3" Grid.ColumnSpan="4"/>
+        <Label Content="Hash" HorizontalAlignment="Left" x:Name ="label_res_Copy1"  FontFamily="Times New Roman" Height="31" Margin="35,82,0,0" VerticalAlignment="Top" Width="94" Grid.ColumnSpan="3"/>
+        <Label Content="Shift" HorizontalAlignment="Left" x:Name ="label_res_Copy2" FontFamily="Times New Roman"  Height="31" Margin="35,143,0,0" VerticalAlignment="Top" Width="51" Grid.ColumnSpan="2"/>
+        <GroupBox Header="Steps" HorizontalAlignment="Left"  FontFamily="Times New Roman" Height="87" Margin="38,14,0,0" VerticalAlignment="Top" Width="229" Grid.Column="4">
+            <Label Content="(hash &lt;&lt; 5) + hash + str[i]" HorizontalAlignment="Left" FontFamily="Times New Roman" Height="26" Margin="0,10,0,0" VerticalAlignment="Top" Width="151"/>
+        </GroupBox>
+        <Label Content="i = " HorizontalAlignment="Left" FontFamily="Times New Roman" Height="31" Margin="186,40,0,0" VerticalAlignment="Top" Width="30" Grid.Column="4"/>
+        <Label Content="" HorizontalAlignment="Left" FontFamily="Times New Roman" Height="31" x:Name ="iterNum"  Margin="208,40,0,0" VerticalAlignment="Top" Width="30" Grid.Column="4"/>
+        <Label Content="" HorizontalAlignment="Left" FontFamily="Times New Roman" x:Name ="label_sum1"  Height="30" Margin="24,247,0,0" VerticalAlignment="Top" Width="180" Grid.Column="4"/>
+        <Label Content="" HorizontalAlignment="Left" FontFamily="Times New Roman" x:Name ="label_sum2"  Height="30" Margin="24,277,0,0" VerticalAlignment="Top" Width="180" Grid.Column="4"/>
+        <Button Content="Reset Result" Name ="CleanButton" HorizontalAlignment="Left" FontFamily="Times New Roman" Margin="360,14,0,0" VerticalAlignment="Top" Width="116" Click="Button_Dump_Click" Height="46" Grid.ColumnSpan="2" Grid.Column="3"/>
+        <Label Content="" HorizontalAlignment="Left" FontFamily="Times New Roman" x:Name ="label_sum_res"  Height="30" Margin="24,317,0,0" VerticalAlignment="Top" Width="180" Grid.Column="4"/>
+        <Label Content="" HorizontalAlignment="Left" FontFamily="Times New Roman" x:Name ="label_res_Copy"  Height="32" Margin="132,54,0,0" VerticalAlignment="Top" Width="303" Grid.Row="3" Grid.Column="3"/>
+        <Label Content="Binary representation:" FontFamily="Times New Roman" HorizontalAlignment="Left" x:Name ="label_res_Copy3"  Height="32" Margin="35,11,0,0" VerticalAlignment="Top" Width="303" Grid.Row="3" Grid.ColumnSpan="4"/>
+        <Label Content="Hexadecimal representation:" FontFamily="Times New Roman" HorizontalAlignment="Left" x:Name ="label_res_Copy4"  Height="32" Margin="132,11,0,0" VerticalAlignment="Top" Width="303" Grid.Row="3" Grid.Column="3"/>
+        <Ellipse Fill="White" Name ="move"  HorizontalAlignment="Left" Height="15" Margin="78,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,0.413" Grid.Column="4"/>
+        <Ellipse Fill="White" Name ="sum1" HorizontalAlignment="Left" Height="15" Margin="104,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,0.413" Grid.Column="4"/>
+        <Ellipse Fill="White" Name ="sum2" HorizontalAlignment="Left" Height="15" Margin="138,67,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,0.413" Grid.Column="4"/>
+        <Ellipse Fill="White" Name ="move2" HorizontalAlignment="Left" Height="15" Margin="11,149,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,0.413" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Ellipse Fill="White" x:Name ="sumF" HorizontalAlignment="Left" Height="15" Margin="22,220,0,0" Stroke="Black" VerticalAlignment="Top" Width="15" RenderTransformOrigin="0.533,0.413" Grid.Column="2"/>
+        <ComboBox Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="399,-22,0,0" VerticalAlignment="Top" Width="120" Grid.Column="3"/>
+        <Slider Grid.Column="4" Name="SpeedCh" Minimum="0.1" Maximum="10" HorizontalAlignment="Left" Margin="55,155,0,0" VerticalAlignment="Top" Height="19" Width="199" ValueChanged="Slider_ValueChanged"/>
+        <Label Content="Low" Grid.Column="4" FontSize="7" HorizontalAlignment="Left" Height="20" Margin="43,174,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label Content="High" Grid.Column="4" FontSize="7" HorizontalAlignment="Left" Height="20" Margin="197,174,0,0" VerticalAlignment="Top" Width="70"/>
+
+    </Grid>
+</Window>
